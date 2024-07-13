@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2-s3978322-Phan Chi Lan</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+  <main>
+    <div class="loader-wrapper">
+      <img src="emoji.png" />
+    </div>
+
+    <div class="menu-open">
+      <img src="emoji.png" id="hamburger">
+    </div>
+    <div class="nav-container">
+      <div class="menu-close"><img src="emoji-close.png"></div>
+      <nav class="menu">
+        <div class="menu__item">
+          <a href="index.html" class="menu__item-link">
+            <div class="text">Home</div>
+          </a>
+        </div>
+        <div class="menu__item">
+          <a href="about.html" class="menu__item-link">About</a>
+
+        </div>
+        <div class="menu__item">
+          <a href="work.html" class="menu__item-link">recent works</a>
+
+        </div>
+        <div class="menu__item">
+          <a href="contact.html" class="menu__item-link">Contact</a>
+
+        </div>
+      </nav>
+    </div>
+
+    <div class="eyes">
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+    </div>
+
+    <div class="dis-text">
+      <p>this is an<br>experimental portfolio, <br> therefore some works <br> will not be linked directly</p>
+    </div>
+
+    <div class="home" id="home">
+      <div class="intro-text">
+        <h2>i am &nbsp<b id="lan">lan</b></h2>
+        <h3>currently a</h3>
+        <h3><em>digital media student</em></h3>
+      </div>
+    </div>
+  </main>
+  <script>
+    var t1 = new TimelineMax({ paused: true });
+
+    t1.to(".nav-container", 1, {
+      left: 0,
+      ease: Expo.easeInOut,
+    });
+
+    t1.staggerFrom(
+      ".menu > div",
+      0.8,
+      { x: 100, opacity: 0, ease: Expo.easeOut },
+      "0.2",
+      "-=0.1"
+    );
+
+    t1.reverse();
+    $(document).on("click", ".menu-open", "menu__item", function () {
+      t1.reversed(!t1.reversed());
+    });
+    $(document).on("click", ".menu-close", function () {
+      t1.reversed(!t1.reversed());
+    });
+  </script>
+  <script>
+    var balls = document.getElementsByClassName("ball");
+    document.onmousemove = function () {
+      var x = event.clientX * 100 / window.innerWidth + "%";
+      var y = event.clientY * 100 / window.innerHeight + "%";
+
+      for (var i = 0; i < 2; i++) {
+        balls[i].style.left = x;
+        balls[i].style.top = y;
+        balls[i].style.transform = "translate(-" + x + ",-" + y + ")";
+      }
+    }
+  </script>
+  <script>
+    $(window).on("load", function () {
+      $("document").ready($(".loader-wrapper").fadeOut("slow"));
+    });
+  </script>
+</body>
+
+</html>

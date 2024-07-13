@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2-s3978322-Phan Chi Lan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <img src="emoji.png" />
+    </div>
+    <div class="copyright">
+        <a href="index.html">
+            <h4>&copy Ian</h4>
+        </a>
+    </div>
+    <div class="contact">
+        <h2>thank you for your time !</h2>
+        <h4>feel free to let me know your thoughts on this site !</h4>
+    </div>
+    <div class="socials">
+        <li>
+            <a href="facebook.com">facebook</a>
+            <a href="instagram.com">instagram</a>
+        </li>
+    </div>
+    <div class="decor-2">
+        <img src="flower-bright.png">
+    </div>
+    <div class="decor-3">
+        <img src="flower-dark.png">
+    </div>
+
+    <div class="menu-open">
+        <img src="emoji.png" id="hamburger">
+    </div>
+    <div class="nav-container">
+        <div class="menu-close"><img src="emoji-close.png"></div>
+        <nav class="menu">
+            <div class="menu__item">
+                <a href="index.html" class="menu__item-link">
+                    <div class="text">Home</div>
+                </a>
+            </div>
+            <div class="menu__item">
+                <a href="about.html" class="menu__item-link">About</a>
+
+            </div>
+            <div class="menu__item">
+                <a href="work.html" class="menu__item-link">recent works</a>
+
+            </div>
+            <div class="menu__item">
+                <a href="contact.html" class="menu__item-link">Contact</a>
+
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        var t1 = new TimelineMax({ paused: true });
+
+        t1.to(".nav-container", 1, {
+            left: 0,
+            ease: Expo.easeInOut,
+        });
+
+        t1.staggerFrom(
+            ".menu > div",
+            0.8,
+            { x: 100, opacity: 0, ease: Expo.easeOut },
+            "0.2",
+            "-=0.1"
+        );
+
+        t1.reverse();
+        $(document).on("click", ".menu-open", "menu__item", function () {
+            t1.reversed(!t1.reversed());
+        });
+        $(document).on("click", ".menu-close", function () {
+            t1.reversed(!t1.reversed());
+        });
+    </script>
+
+    <script>
+        $(window).on("load", function () {
+            $("document").ready($(".loader-wrapper").fadeOut("slow"));
+        });
+    </script>
+</body>
+
+</html>

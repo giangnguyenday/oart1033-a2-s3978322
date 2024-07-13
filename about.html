@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2-s3978322-Phan Chi Lan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <img src="emoji.png" />
+    </div>
+
+    <div class="about" id="about">
+        <div class="to-work">
+            <a href="work.html">my recent works</a>
+        </div>
+        <div class="about-text">
+            <h3>I am a <strong style="color:#00AACE;">beginner</strong> in</h3>
+            <h2><em>2D, 3D and UI/UX design,</em></h2>
+            <h3>training for better skills.</h3>
+        </div>
+        <div class="introduction-text">
+            <p>&copy learning since 2021 <br> i consider my self as <br><em>hard-working</em></p>
+            <p>this website is regarded<br><b style="color:#00AACE;">as an expeprimental piece,</b><br>further versions
+                will be updated</p>
+            <p id="advised">large screen is recommended for better viewing :]</p>
+        </div>
+
+    </div>
+    <div class="menu-open">
+        <img src="emoji.png" id="hamburger">
+    </div>
+    <div class="nav-container">
+        <div class="menu-close"><img src="emoji-close.png"></div>
+        <nav class="menu">
+            <div class="menu__item">
+                <a href="index.html" class="menu__item-link">
+                    <div class="text">Home</div>
+                </a>
+            </div>
+            <div class="menu__item">
+                <a href="about.html" class="menu__item-link">About</a>
+
+            </div>
+            <div class="menu__item">
+                <a href="work.html" class="menu__item-link">recent works</a>
+
+            </div>
+            <div class="menu__item">
+                <a href="contact.html" class="menu__item-link">Contact</a>
+
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        $(window).on("load", function () {
+            $("document").ready($(".loader-wrapper").fadeOut("slow"));
+        });
+    </script>
+
+    <script>
+        var t1 = new TimelineMax({ paused: true });
+
+        t1.to(".nav-container", 1, {
+            left: 0,
+            ease: Expo.easeInOut,
+        });
+
+        t1.staggerFrom(
+            ".menu > div",
+            0.8,
+            { x: 100, opacity: 0, ease: Expo.easeOut },
+            "0.2",
+            "-=0.1"
+        );
+
+        t1.reverse();
+        $(document).on("click", ".menu-open", "menu__item", function () {
+            t1.reversed(!t1.reversed());
+        });
+        $(document).on("click", ".menu-close", function () {
+            t1.reversed(!t1.reversed());
+        });
+    </script>
+</body>
+
+</html>

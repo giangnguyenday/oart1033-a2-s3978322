@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 337.6 337.6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00aace;
+        stroke: #483113;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #f7d911;
+        stroke: #9c752b;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <g id="_Radial_Repeat_" data-name="&amp;lt;Radial Repeat&amp;gt;">
+          <path class="cls-1" d="m62.93,253.62c9.64-15.53,77.83-87.01,99.05-73.84,21.22,13.17-12.57,106.01-22.21,121.54-9.64,15.53-38.01,22.85-59.23,9.68-21.22-13.17-27.25-41.85-17.61-57.38Z"/>
+        </g>
+        <g id="_Radial_Repeat_-2" data-name="&amp;lt;Radial Repeat&amp;gt;">
+          <path class="cls-1" d="m42.41,119.53c18.27.58,114.27,23.9,113.48,48.86-.8,24.96-98.09,42.12-116.36,41.53-18.27-.58-38.8-21.49-38-46.46.8-24.96,22.61-44.52,40.89-43.94Z"/>
+        </g>
+        <g id="_Radial_Repeat_-3" data-name="&amp;lt;Radial Repeat&amp;gt;">
+          <path class="cls-1" d="m148.27,34.7c8.63,16.11,36.44,110.91,14.42,122.7-22.02,11.79-85.52-63.89-94.15-80-8.63-16.11-.79-44.35,21.23-56.14,22.02-11.79,49.87-2.68,58.5,13.44Z"/>
+        </g>
+        <g id="_Radial_Repeat_-4" data-name="&amp;lt;Radial Repeat&amp;gt;">
+          <path class="cls-1" d="m274.67,83.98c-9.64,15.53-77.83,87.01-99.05,73.84-21.22-13.17,12.57-106.01,22.21-121.54,9.64-15.53,38.01-22.85,59.23-9.68,21.22,13.17,27.25,41.85,17.61,57.38Z"/>
+        </g>
+        <g id="_Radial_Repeat_-5" data-name="&amp;lt;Radial Repeat&amp;gt;">
+          <path class="cls-1" d="m295.19,218.07c-18.27-.58-114.27-23.9-113.48-48.86.8-24.96,98.09-42.12,116.36-41.53,18.27.58,38.8,21.49,38,46.46-.8,24.96-22.61,44.52-40.89,43.94Z"/>
+        </g>
+        <g id="_Radial_Repeat_-6" data-name="&amp;lt;Radial Repeat&amp;gt;">
+          <path class="cls-1" d="m189.32,302.89c-8.63-16.11-36.44-110.91-14.42-122.7,22.02-11.79,85.52,63.89,94.15,80,8.63,16.11.79,44.35-21.23,56.14-22.02,11.79-49.87,2.68-58.5-13.44Z"/>
+        </g>
+      </g>
+      <circle class="cls-2" cx="168.8" cy="168.8" r="45"/>
+    </g>
+  </g>
+</svg>

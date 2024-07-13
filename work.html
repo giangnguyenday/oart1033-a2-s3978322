@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2-s3978322-Phan Chi Lan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <img src="emoji.png" />
+    </div>
+
+    <div class="menu-open">
+        <img src="emoji.png" id="hamburger">
+    </div>
+    <div class="nav-container">
+        <div class="menu-close"><img src="emoji-close.png"></div>
+        <nav class="menu">
+            <div class="menu__item">
+                <a href="index.html" class="menu__item-link">
+                    <div class="text">Home</div>
+                </a>
+            </div>
+            <div class="menu__item">
+                <a href="about.html" class="menu__item-link">About</a>
+
+            </div>
+            <div class="menu__item">
+                <a href="work.html" class="menu__item-link">recent works</a>
+
+            </div>
+            <div class="menu__item">
+                <a href="contact.html" class="menu__item-link">Contact</a>
+
+            </div>
+        </nav>
+    </div>
+    <div class="work" id="work">
+        <nav>
+            <ul>
+                <li>
+                    <div class="link" id="title-list">
+                        <span class="title">project title</span>
+                        <span class="title">category</span>
+                        <span class="title" id="year">year</span>
+                        <span id="project-name">just one</span>
+                        <span>Vector icons</span>
+                        <span>2022</span>
+                        <div class="hover-reveal">
+                            <a href="vector.png"><img class="hidden-img" src="vector.png"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link">
+                        <span id="project-name">Animatic</span>
+                        <span>digital video</span>
+                        <span>2022</span>
+                        <div class="hover-reveal">
+                            <a href="video.png"><img class="hidden-img" src="video.png"></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="link">
+                        <span id="project-name">harzandous</span>
+                        <span>website</span>
+                        <span>2023</span>
+                        <div class="hover-reveal">
+                            <a href="A1_s3978322_Phan Chi Lan_Web/index.html"><img class="hidden-img" src="web.png"></a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        $(window).on("load", function () {
+            $("document").ready($(".loader-wrapper").fadeOut("slow"));
+        });
+    </script>
+
+    <script>
+        var t1 = new TimelineMax({ paused: true });
+
+        t1.to(".nav-container", 1, {
+            left: 0,
+            ease: Expo.easeInOut,
+        });
+
+        t1.staggerFrom(
+            ".menu > div",
+            0.8,
+            { x: 100, opacity: 0, ease: Expo.easeOut },
+            "0.2",
+            "-=0.1"
+        );
+
+        t1.reverse();
+        $(document).on("click", ".menu-open", "menu__item", function () {
+            t1.reversed(!t1.reversed());
+        });
+        $(document).on("click", ".menu-close", function () {
+            t1.reversed(!t1.reversed());
+        });
+    </script>
+
+    <script>
+        const link = document.querySelectorAll('.link');
+        const linkHoverReveal = document.querySelectorAll('.hover-reveal');
+        const linkImages = document.querySelectorAll('.hidden-img');
+
+
+        for (let i = 0; i < link.length; i++) {
+            link[i].addEventListener('mousemove', (e) => {
+                linkHoverReveal[i].style.opacity = 1;
+                linkImages[i].style.transform = 'scale(1, 1)';
+            })
+
+            link[i].addEventListener('mouseleave', (e) => {
+                linkHoverReveal[i].style.opacity = 0;
+                linkHoverReveal[i].style.transform = `translate(-50%, -40%)`;
+                linkImages[i].style.transform = 'scale(0.2, 0.2)';
+            })
+        }
+    </script>
+</body>
+
+</html>
